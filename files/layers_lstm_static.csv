@@ -1,0 +1,11 @@
+static_input,0,,,,
+nonstatic_input,-1,,,,
+LSTM,0,1,,,
+dim_in,dim_out,window,pooling,use_bias,use_last_output
+300,100,1,mean_pooling,TRUE,FALSE
+FullyConnected,1,2,,,
+n_in,n_out,activation,pooling,use_bias,
+100,50,Sigmoid,None,TRUE,
+FullyConnected,2,3,,,
+n_in,n_out,activation,pooling,use_bias,
+50,labels,last,None,TRUE,

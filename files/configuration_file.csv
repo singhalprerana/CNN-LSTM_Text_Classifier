@@ -1,0 +1,17 @@
+cv_folds,5
+cv_repeats,1
+epochs,100
+epsilon,0.1
+validation,0
+threshold,1
+random_number,9876
+dropout,0.4
+learning_rate,0.95
+update_function,sgd_updates_adadelta
+error_function,negative_log_likelihood
+preprocess,"to_lowercase,space_out_punctuations"
+delimiter,","
+wordvec_files,../GoogleNews-vectors-negative300.bin
+variance_random,0.25
+dim,300
+last_activation,Softmax

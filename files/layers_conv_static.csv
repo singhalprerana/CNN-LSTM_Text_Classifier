@@ -1,0 +1,17 @@
+static_input,0,,,,
+nonstatic_input,-1,,,,
+Convolution,0,1,,,
+dim_in,dim_out,window,pooling,use_bias,activation
+300,100,3,Max_pooling,TRUE,Sigmoid
+Convolution,0,2,,,
+dim_in,dim_out,window,pooling,use_bias,activation
+300,100,4,Max_pooling,TRUE,Sigmoid
+Convolution,0,3,,,
+dim_in,dim_out,window,pooling,use_bias,activation
+300,100,5,Max_pooling,TRUE,Sigmoid
+FullyConnected,"1,2,3",4,,,
+n_in,n_out,activation,pooling,use_bias,
+300,50,Sigmoid,None,TRUE,
+FullyConnected,4,5,,,
+n_in,n_out,activation,pooling,use_bias,
+50,labels,last,None,TRUE,
